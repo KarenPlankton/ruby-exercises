@@ -13,7 +13,7 @@ class StringTest < Minitest::Test
     name = "alice"
     # In place of the line below, call a method on the name variable
     # defined above to acheive the expected output.
-    actual = name._____
+    actual = name.capitalize
     expected = "Alice"
 
     assert_equal expected, actual
@@ -23,7 +23,7 @@ class StringTest < Minitest::Test
     skip
     name = "aLiCe"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
+    actual = name.upcase
     expected = "ALICE"
 
     assert_equal expected, actual
@@ -33,7 +33,7 @@ class StringTest < Minitest::Test
     skip
     name = "AlIcE"
     # In place of the line below, call a method to achieve the expected output.
-    actual = name._____
+    actual = name.downcase
     expected = "alice"
 
     assert_equal expected, actual
@@ -43,7 +43,7 @@ class StringTest < Minitest::Test
     skip
     rhyme = "peter piper picked a peck of picked peppers"
     # In place of the line below, call a method to achieve the expected output.
-    actual = rhyme._____
+    actual = rhyme.reverse
     expected = "sreppep dekcip fo kcep a dekcip repip retep"
 
     assert_equal expected, actual
@@ -53,7 +53,7 @@ class StringTest < Minitest::Test
     skip
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
+    actual = word.sub('t','k')
     expected = "kicking"
 
     assert_equal expected, actual
@@ -63,7 +63,7 @@ class StringTest < Minitest::Test
     skip
     word = "ticking"
     # In place of the line below, call a method to achieve the expected output.
-    actual = word.______
+    actual = word.gsub('ticking','clocking')
     expected = "clocking"
 
     assert_equal expected, actual
@@ -73,7 +73,7 @@ class StringTest < Minitest::Test
     skip
     words = "five sleepy kittens"
     # In place of the line below, call a method to achieve the expected output.
-    actual = words.______
+    actual = words.gsub('e','*')
     expected = "fiv* sl**py kitt*ns"
 
     assert_equal expected, actual

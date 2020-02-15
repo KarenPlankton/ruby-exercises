@@ -17,7 +17,8 @@ class MapPatternTest < Minitest::Test
     numbers = [1, 2, 3, 4, 5]
     doubles = []
     numbers.each do |number|
-      # Your code goes here
+      number = number * 2
+      doubles << number
     end
     assert_equal [2, 4, 6, 8, 10], doubles
   end
@@ -26,28 +27,38 @@ class MapPatternTest < Minitest::Test
     skip
     numbers = [1, 2, 3, 4, 5]
     squares = []
-    # Your code goes here
+    numbers.each do |number|
+    number = number**2
+    squares << number
+  end
     assert_equal [1, 4, 9, 16, 25], squares
   end
 
   def test_lengths
     skip
     names = ["alice", "bob", "charlie", "david", "eve"]
-    # Your code goes here
+    lengths = []
+    names.each do |number|
+      lengths << number.length
+
     assert_equal [5, 3, 7, 5, 3], lengths
   end
 
   def test_normalize_zip_codes
     skip
     numbers = [234, 10, 9119, 38881]
-    # Your code goes here
+    zip_codes=[]
+    numbers.each do |number|
+    zip_codes << number.to_s.rjust(5, "0")
     assert_equal ["00234", "00010", "09119", "38881"], zip_codes
   end
 
   def test_backwards
     skip
     names = ["alice", "bob", "charlie", "david", "eve"]
-    # Your code goes here
+    backwards=[]
+    names.each do |name|
+      backwards << name.reverse
     assert_equal ["ecila", "bob", "eilrahc", "divad", "eve"], backwards
   end
 
